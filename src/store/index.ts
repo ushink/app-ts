@@ -10,3 +10,8 @@ export function setupStore() {
     reducer: rootReducer,
   });
 }
+
+// сделай мне типы которые возвращают в итоге функции
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppStore = ReturnType<typeof setupStore>;
+export type AppDispatch = AppStore["dispatch"];
